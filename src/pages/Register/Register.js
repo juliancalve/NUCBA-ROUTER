@@ -67,8 +67,13 @@ const Register = () => {
         }
     }, []);
 
+    const onBack = () => {
+        history.goBack();
+    }
+
     return (
         <div>
+            <strong style={{cursor: 'pointer'}} onClick={onBack}>{'<-'}Volver</strong>
             <h1>Registrate</h1>
             <form style={{display: 'flex', flexDirection: 'column', width: '50%', margin: 'auto'}}>
                 <input type='text' placeholder='Name' value={name} onChange={handleChangeName}/>
